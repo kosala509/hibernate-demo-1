@@ -36,12 +36,14 @@ public class StudentEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    // Attribute
+    // Attribute | Derived Attribute
     @Column(name = "nic", nullable = false)
     private String nic;
 
+    // Composite Attribute
     private StudentName name;
 
+    // Multi Valued Attribute
     @ElementCollection
     @CollectionTable(
         name = "student_mobile",
